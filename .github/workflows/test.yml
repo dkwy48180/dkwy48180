@@ -3,6 +3,7 @@ name: L
 on:
   schedule:
     - cron: '*/5 * * * *'
+  workflow_dispatch:
 
 jobs:
   curl_request:
