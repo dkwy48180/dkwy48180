@@ -1,0 +1,12 @@
+name: L
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+
+jobs:
+  curl_request:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Make HTTP request
+        run: curl -s -o /dev/null -w "%{http_code}" "https://nekocurit.asia/"
